@@ -32,4 +32,10 @@ public class APIController {
         return "Hello " + user.getFirstName() + " " + user.getLastName() + " from BridgeLabz";
 
     }
+    @PutMapping("hello/put/{firstName}/")
+
+    public String sayHello(@PathVariable String firstName, @RequestParam String lastName) {
+
+        return "Hello " + firstName + " " + lastName + " from BridgeLabz";
+    }
 }
